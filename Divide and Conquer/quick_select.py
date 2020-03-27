@@ -1,3 +1,7 @@
+"""
+python program to find the ith order statistic of a list of unsorted numbers in Ø(n) time
+"""
+
 import random
 
 def partition(nlist):
@@ -21,5 +25,4 @@ def quick_select(nlist,i):
         elif pivot >  i:
             return quick_select(nlist[:pivot],i)
         else:
-
             return quick_select(nlist[pivot+1:],i - pivot - 1)

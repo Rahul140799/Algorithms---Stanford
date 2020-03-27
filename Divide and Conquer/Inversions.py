@@ -1,14 +1,26 @@
+"""
+
+Program to count the number of split inversions in a list in O(nlogn) time.
+Done Using a modified implementation of MergeSort
+
+"""
+
 def count(nlist):
     if len(nlist) == 1:
         return nlist,0
     else:
         mid = len(nlist) // 2
-        left,x = count(nlist[:mid])
-        right,y = count(nlist[mid:])
-        res,z = countSplitInversions(left,right)
+        left,x = count(nlist[:mid])   # Count number of inversions in left subarray
+        right,y = count(nlist[mid:])  # Count number of inversions in right subarray
+        res,z = countSplitInversions(left,right)  # Count number of inversions between left and right subarray 
     return res,x+y+z
 
+
+
 def countSplitInversions(left,right):
+    """
+    Count number of inversions between left and right subarray
+    """
     result = []
     inverisonCount = 0
     while left and right:

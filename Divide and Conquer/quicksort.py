@@ -1,4 +1,6 @@
-
+"""
+Implementation of quicksort using the median of the first, last and middle elements ass the pivot element
+"""
 count = 0
 
 def findPivotPosition(nlist):

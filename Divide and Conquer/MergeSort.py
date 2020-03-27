@@ -1,3 +1,7 @@
+"""
+Implementation of the Merge Sort Algorithm
+"""
+
 def mergeSort(nlist):
     if len(nlist) > 1:
         mid = len(nlist) // 2
